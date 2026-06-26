@@ -220,7 +220,7 @@ export function HistoryTable({
                   Batch ID
                 </div>
               </th>
-              <th className="pb-4 px-4 whitespace-nowrap">
+              <th className="pb-4 px-4 whitespace-nowrap" aria-sort={sortColumn === "createdAt" ? (sortOrder === "asc" ? "ascending" : "descending") : "none"}>
                 <div className="flex items-center gap-1 cursor-pointer hover:text-gray-300" onClick={() => toggleSort("createdAt")}>
                   Date Submitted {sortColumn === "createdAt" ? (sortOrder === "asc" ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />) : <ChevronDown className="h-3 w-3 opacity-30" />}
                 </div>
@@ -233,7 +233,7 @@ export function HistoryTable({
                 </div>
               </th>
               <th className="pb-4 px-4 whitespace-nowrap">Transactions</th>
-              <th className="pb-4 px-4 whitespace-nowrap">
+              <th className="pb-4 px-4 whitespace-nowrap" aria-sort={sortColumn === "status" ? (sortOrder === "asc" ? "ascending" : "descending") : "none"}>
                 <div className="flex items-center gap-1 cursor-pointer hover:text-gray-300" onClick={() => toggleSort("status")}>
                   Status {sortColumn === "status" ? (sortOrder === "asc" ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />) : <ChevronDown className="h-3 w-3 opacity-30" />}
                 </div>
